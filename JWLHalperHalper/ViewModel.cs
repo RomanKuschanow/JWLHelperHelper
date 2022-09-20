@@ -14,6 +14,7 @@ namespace JWLHalperHalper
         public ObservableCollection<KeyValuePair<string, string>> Files => new ObservableCollection<KeyValuePair<string, string>>(GetIniFiles.GetFiles());
 
         public ICommand Open => new RelayCommand(OpenExecute);
+
         private void OpenExecute(object obj)
         {
             var file = (obj as KeyValuePair<string, string>?).Value;
@@ -30,7 +31,6 @@ namespace JWLHalperHalper
             }
             File.Copy(file.Value, file.Value.Replace(file.Key, "JWLHelper.ini"), true);
             Process.Start("C:\\Program Files\\JWLHelper\\JWLHelper.exe");
-            Environment.Exit(0);
         }
 
         #region PropertyChanged
