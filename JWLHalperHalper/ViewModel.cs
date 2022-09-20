@@ -7,7 +7,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
-namespace JWLHalperHalper
+namespace JWLHelperHelper
 {
     public class ViewModel : INotifyPropertyChanged
     {
